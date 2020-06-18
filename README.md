@@ -1,1 +1,1 @@
-# sparticus
+# Sparticus
