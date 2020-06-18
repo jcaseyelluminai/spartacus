@@ -40,11 +40,12 @@ export const loadUser = () => (dispatch, getState) => {
 };
 
 // LOGIN USER
-export const login = (username, password) => (dispatch) => {
+export const login = (username, password, csrftoken) => (dispatch) => {
   // Headers
   const config = {
     headers: {
       "Content-Type": "application/json",
+      "X-CSRFTOKEN": csrftoken,
     },
   };
 
@@ -98,11 +99,14 @@ export const logout = () => (dispatch, getState) => {
 
 // REGISTER USER
 
-export const register = ({ username, email, password }) => (dispatch) => {
+export const register = ({ username, email, password }, csrftoken) => (
+  dispatch
+) => {
   // Headers
   const config = {
     headers: {
       "Content-Type": "application/json",
+      "X-CSRFTOKEN": csrftoken,
     },
   };
 

@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { register } from "../../actions/auth";
 import { createAlert } from "../../actions/alerts";
+import { withCookies } from "react-cookie";
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -59,7 +60,7 @@ const Register = (props) => {
         email,
         password: password1,
       };
-      props.register(newUser);
+      props.register(newUser, props.cookies.get("csrftoken"));
     }
   };
 
@@ -166,4 +167,6 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
 });
 
-export default connect(mapStateToProps, { register, createAlert })(Register);
+export default connect(mapStateToProps, { register, createAlert })(
+  withCookies(Register)
+);

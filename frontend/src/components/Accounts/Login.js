@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../actions/auth";
+import { withCookies } from "react-cookie";
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -46,7 +47,7 @@ const Login = (props) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    props.login(username, password);
+    props.login(username, password, props.cookies.get("csrftoken"));
   };
 
   if (props.isAuthenticated) {
@@ -123,4 +124,4 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
 });
 
-export default connect(mapStateToProps, { login })(Login);
+export default connect(mapStateToProps, { login })(withCookies(Login));
