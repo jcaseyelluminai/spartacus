@@ -87,7 +87,7 @@ export const logout = () => (dispatch, getState) => {
     })
     .catch((err) => {
       const errors = {
-        msg: err.response.data.detail,
+        msg: err.response.detail,
         status: err.response.status,
       };
       dispatch({
