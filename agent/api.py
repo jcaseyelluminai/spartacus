@@ -7,8 +7,6 @@ from .serializers import MessageSerializer
 from knox.auth import TokenAuthentication
 import requests
 import json
-from rasa.core.agent import Agent
-from rasa.core.interpreter import RasaNLUInterpreter
 
 
 # Message Viewset
@@ -33,10 +31,6 @@ class MessageViewSet(viewsets.ModelViewSet):
 
         messages = request.data['content']
 
-        # agent = Agent.load('agent/Aquiline/models/20200611-123548')
-        # response = agent.handle_text(
-        #     text_message=messages, sender_id=user.username)
-
         r = requests.post('https://sparticusdemo.herokuapp.com/webhooks/rest/webhook', data=json.dumps({
             "sender": user.username,
             "message": messages
@@ -47,10 +41,6 @@ class MessageViewSet(viewsets.ModelViewSet):
         response_data = json.loads(r.text)
 
         print(response_data)
-
-        # print(agent)
-
-        # print(response)
 
         if response_data:
             reply = response_data[0]['text']
