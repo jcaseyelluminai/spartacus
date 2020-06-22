@@ -49,6 +49,10 @@ select:-webkit-autofill:focus {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
+#adlogo {
+  width: 60px;
+}
+
 .chat {
   height: 90vh;
 }

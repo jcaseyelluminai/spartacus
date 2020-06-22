@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
+import logo from "../../adlogo.png";
 
 const Header = (props) => {
   const { isAuthenticated, user } = props.auth;
@@ -41,7 +42,7 @@ const Header = (props) => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
       <a className="navbar-brand" href="">
-        SPARTICUS
+        <img id="adlogo" src={logo} alt="Logo" />
       </a>
       <button
         className="navbar-toggler"

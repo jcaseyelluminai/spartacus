@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import Header from "./layout/Header";
+import Home from "./chat/Home";
 import Chat from "./chat/Chat";
 import Alerts from "./layout/Alerts";
 import Login from "./Accounts/Login";
@@ -26,6 +27,7 @@ const App = (props) => {
         <Header />
         <Alerts />
         <Switch>
+          <Route exact path="/" component={Home} />
           <PrivateRoute exact path="/agent" component={Chat} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
