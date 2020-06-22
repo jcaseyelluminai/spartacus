@@ -274,3 +274,23 @@ select:-webkit-autofill:focus {
     margin-bottom: 15px !important;
   }
 }
+
+#home-page {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#home-page .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#home-page .content-text {
+  width: 50%;
+}
+
+#home-page p {
+  color: #ddd;
+}
