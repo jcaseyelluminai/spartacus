@@ -276,21 +276,36 @@ select:-webkit-autofill:focus {
 }
 
 #home-page {
-  padding: 15px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 #home-page .content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
+  width: 80%;
+  margin-bottom: 30px;
 }
 
 #home-page .content-text {
-  width: 50%;
+  width: 45%;
 }
 
 #home-page p {
   color: #ddd;
+}
+
+#home-page .content-img {
+  width: 45%;
+}
+
+#home-page img {
+  width: 100%;
+  box-shadow: 10px 10px 2px #222;
 }
