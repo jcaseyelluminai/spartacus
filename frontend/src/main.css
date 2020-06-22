@@ -5,8 +5,6 @@
 }
 
 html {
-  height: 100vh;
-  overflow-y: hidden;
   margin: 0;
   padding: 0;
 }
@@ -19,7 +17,6 @@ body {
   line-height: 1.5 !important;
   font-weight: 200 !important;
   letter-spacing: 1px !important;
-  min-height: 100%;
   background: #7f7fd5;
   background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
@@ -44,7 +41,7 @@ select:-webkit-autofill:focus {
 }
 
 #root {
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
@@ -54,7 +51,8 @@ select:-webkit-autofill:focus {
 }
 
 .chat {
-  height: 90vh;
+  padding-top: 80px;
+  height: 100vh;
 }
 .card {
   height: 100%;
@@ -275,13 +273,20 @@ select:-webkit-autofill:focus {
   }
 }
 
+.navbar {
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 #home-page {
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
-  height: 100%;
+  padding-top: 100px;
+  min-height: 100vh;
 }
 
 #home-page .content {
@@ -290,7 +295,7 @@ select:-webkit-autofill:focus {
   align-items: center;
   justify-content: space-around;
   width: 80%;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #home-page .content-text {
@@ -306,6 +311,16 @@ select:-webkit-autofill:focus {
 }
 
 #home-page img {
-  width: 100%;
+  width: 80%;
   box-shadow: 10px 10px 2px #222;
+}
+
+#login-page {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+#register-page {
+  height: 100vh;
+  padding-top: 100px;
 }

@@ -69,92 +69,94 @@ const Register = (props) => {
   }
 
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Register
-        </Typography>
-        <form className={classes.form} noValidate onSubmit={onSubmit}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                autoComplete="off"
-                name="register-username"
-                variant="outlined"
-                required
-                fullWidth
-                id="username"
-                label="Username"
-                autoFocus
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                autoComplete="off"
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="register-email"
-                type="email"
-                autoComplete="off"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                autoComplete="off"
-                variant="outlined"
-                required
-                fullWidth
-                name="register-password1"
-                label="Password"
-                type="password"
-                id="password1"
-                value={password1}
-                onChange={(e) => setPassword1(e.target.value)}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                autoComplete="off"
-                variant="outlined"
-                required
-                fullWidth
-                name="register-password2"
-                label="Confirm Password"
-                type="password"
-                id="password2"
-                value={password2}
-                onChange={(e) => setPassword2(e.target.value)}
-              />
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
+    <div id="register-page">
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Avatar className={classes.avatar}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
             Register
-          </Button>
-          <Grid container justify="flex-end">
-            <Grid item>
-              <Link to="/login">Already have an account? Sign in</Link>
+          </Typography>
+          <form className={classes.form} noValidate onSubmit={onSubmit}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  autoComplete="off"
+                  name="register-username"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="username"
+                  label="Username"
+                  autoFocus
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  autoComplete="off"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="register-email"
+                  type="email"
+                  autoComplete="off"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  autoComplete="off"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="register-password1"
+                  label="Password"
+                  type="password"
+                  id="password1"
+                  value={password1}
+                  onChange={(e) => setPassword1(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  autoComplete="off"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="register-password2"
+                  label="Confirm Password"
+                  type="password"
+                  id="password2"
+                  value={password2}
+                  onChange={(e) => setPassword2(e.target.value)}
+                />
+              </Grid>
             </Grid>
-          </Grid>
-        </form>
-      </div>
-    </Container>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              Register
+            </Button>
+            <Grid container justify="flex-end">
+              <Grid item>
+                <Link to="/login">Already have an account? Sign in</Link>
+              </Grid>
+            </Grid>
+          </form>
+        </div>
+      </Container>
+    </div>
   );
 };
 
