@@ -31,7 +31,14 @@ class MessageViewSet(viewsets.ModelViewSet):
 
         messages = request.data['content']
 
-        r = requests.post('https://sparticusdemo.herokuapp.com/webhooks/rest/webhook', data=json.dumps({
+        # HEROKU SERVER
+        # r = requests.post('https://sparticusdemo.herokuapp.com/webhooks/rest/webhook', data=json.dumps({
+        #     "sender": user.username,
+        #     "message": messages
+        # }))
+
+        # AWS SERVER
+        r = requests.post('http://3.90.83.126:5005/webhooks/rest/webhook', data=json.dumps({
             "sender": user.username,
             "message": messages
         }))
