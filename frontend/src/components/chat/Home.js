@@ -5,7 +5,7 @@ const Home = () => {
     <div id="home-page">
       <div className="content">
         <div className="content-text">
-          <h3>What is Sparticus?</h3>
+          <h3>What is Spartacus?</h3>
           <p>
             Spartacus is a modular cognitive system used by the AD Cloud to
             extract deep insights, often in real-time, from asset, operational
