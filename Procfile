@@ -1,1 +1,1 @@
-web: gunicorn sparticus.wsgi
+web: gunicorn sparticus.wsgi/Users/jamescasey/Documents/GitHub/spartacus/sparticus/__init__.py
